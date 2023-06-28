@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table{
+            width: 80%;
+            background-color: skyblue;
+            margin: 0 auto;
+        }
+
+        tr td{
+            padding: 10px;
+            /* text-align: right; */
+        }
+
+        tr td:first-child{
+            text-align: right;
+        }
+
+        .animate{
+            animation-name: jump;
+            animation-duration: 1s;
+        }
+
+        @keyframes jump {
+            0%{
+
+            }
+
+            100%{
+                transform: translateY(-100px);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <table id="mainDiv" >
+      <tr>
+        <td>Science</td>
+        <td>
+          <input type="text" id="science" maxlength="3"/>
+        </td>
+      </tr>
+      <tr>
+        <td>Maths</td>
+        <td>
+          <input type="text" id="maths"  maxlength="3"/>
+        </td>
+      </tr>
+      <tr>
+        <td>computer</td>
+        <td>
+          <input type="text" id="computer"  maxlength="3"/>
+        </td>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td>
+          <input type="text" id="english"  maxlength="3"/>
+        </td>
+      </tr>
+      <tr>
+          <td>Total Marks</td>
+          <td>
+              <span id="totalMarks"></span>
+          </td>
+      </tr>
+      <tr>
+          <td>Percentage</td>
+          <td>
+              <span id="totalPer"></span>
+          </td>
+      </tr>
+      <tr>
+          <td>Grade</td>
+          <td>
+              <span id="grade"></span>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <button onclick="getResult()">Result</button>
+          </td>
+      </tr>
+    </table>
+
+    <script src="./src/result.js"></script>
+  </body>
+</html>
